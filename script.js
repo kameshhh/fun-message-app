@@ -2,15 +2,20 @@ const viewIcon = [document.getElementById("view-icon"), document.getElementById(
 function toggleTheme(icon) {
     document.body.classList.toggle("dark-theme");
     const isDarkTheme = document.body.classList.contains("dark-theme");
-
+    const audioPlayer = document.getElementById("audioPlayer");
+    const sentence = document.getElementById("sentence");
     icon.setAttribute("src", isDarkTheme ? "./assets/sun.png" : "./assets/moon.png");
 
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+    } else {
+        audioPlayer.pause();
+    }
+
     if (sentence.classList.contains("hidden")) {
-        // Show the sentence
         sentence.textContent = "This dark is my life without you";
         sentence.classList.remove("hidden");
       } else {
-        // Hide the sentence
         sentence.classList.add("hidden");
       }
 }
@@ -20,3 +25,4 @@ viewIcon.forEach(icon => {
         toggleTheme(icon);
     };
 });
+
