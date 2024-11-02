@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #212121;
+  --cat-image: none;
+}
+
+.dark-theme {
+
+  --primary-color: black;
+  --secondary-color: white;
+  --cat-image: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--primary-color);
+}
+
+h3 {
+  color: var(--secondary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: black;
+}
+
+#cat{
+  display: var(--cat-image);
+  height: 250px; 
+  width: 250px;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+.image-inner-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--primary-color);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.image-details-container {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+#view-icon,
+#view-icon-1 {
+  width: 30px;
+  cursor: pointer;
+}
