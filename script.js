@@ -4,7 +4,9 @@ function toggleTheme(icon) {
     const isDarkTheme = document.body.classList.contains("dark-theme");
     const audioPlayer = document.getElementById("audioPlayer");
     const sentence = document.getElementById("sentence");
+    const catImage = document.getElementById("cat");
     icon.setAttribute("src", isDarkTheme ? "./assets/sun.png" : "./assets/moon.png");
+    catImage.setAttribute("src", isDarkTheme ? "./assets/Sad-Cat-Memes-Transparent-Background.png" : "./assets/happy-cat.webp")
 
     if (audioPlayer.paused) {
         audioPlayer.play();

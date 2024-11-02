@@ -6,16 +6,16 @@
 }
 
 :root {
-  --primary-color: #ffffff;
+  --primary-color: #93d9eb;
+  /* edb0b0 */
   --secondary-color: #212121;
-  --cat-image: none;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark-theme {
-
   --primary-color: black;
   --secondary-color: white;
-  --cat-image: block;
+  --box-shadow: none;
 }
 
 body {
@@ -39,8 +39,6 @@ section {
   min-height: fit-content;
 }
 
-/* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
@@ -49,15 +47,16 @@ section {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: black;
 }
 
-#cat{
-  display: var(--cat-image);
-  height: 250px; 
-  width: 250px;
+#cat {
+  height: 250px;
+  width: 270px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
 }
 
 .icon {
@@ -91,4 +90,8 @@ section {
 #view-icon-1 {
   width: 30px;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
