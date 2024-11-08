@@ -1,11 +1,14 @@
-const viewIcon = [document.getElementById("view-icon"), document.getElementById("view-icon-1")];
-function toggleTheme(icon) {
+const viewIcon = document.getElementById("view-icon");
+viewIcon.onclick = function(){
     document.body.classList.toggle("dark-theme");
     const isDarkTheme = document.body.classList.contains("dark-theme");
+
+    const viewIcon = document.getElementById("view-icon");
     const audioPlayer = document.getElementById("audioPlayer");
     const sentence = document.getElementById("sentence");
     const catImage = document.getElementById("cat");
-    icon.setAttribute("src", isDarkTheme ? "./assets/sun.png" : "./assets/moon.png");
+
+    viewIcon.setAttribute("src", isDarkTheme ? "./assets/sun.png" : "./assets/moon.png");
     catImage.setAttribute("src", isDarkTheme ? "./assets/Sad-Cat-Memes-Transparent-Background.png" : "./assets/happy-cat.webp")
 
     if (audioPlayer.paused) {
@@ -21,10 +24,4 @@ function toggleTheme(icon) {
         sentence.classList.add("hidden");
       }
 }
-
-viewIcon.forEach(icon => {
-    icon.onclick = function () {
-        toggleTheme(icon);
-    };
-});
 
